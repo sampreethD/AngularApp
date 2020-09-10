@@ -14,6 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MovieSectionComponent } from './components/movie-section/movie-section.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MoviedescriptionComponent } from './components/moviedescription/moviedescription.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
     AppComponent,
     LayoutComponent,
     HomeComponent,
-    MovieSectionComponent
+    MovieSectionComponent,
+    MoviedescriptionComponent
   ],
   imports: [
     BrowserModule,

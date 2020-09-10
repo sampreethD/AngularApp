@@ -1,0 +1,21 @@
+<div class="divArea">
+    <h3>{{Header}}</h3>
+    <div class="example-card list">
+        <div class="back">
+            <img style="height:330px;"  [src]=movieDetail.image.original
+                [alt]=movieDetail.name />
+        </div>
+    </div>
+</div>
+
+<div class="back">
+    <div>
+        <h2><i>SHOW : {{movieDetail.name|uppercase}}</i></h2>
+    </div>  
+    <div>
+        <h3><i>LANGUAGE : {{movieDetail.language|uppercase}}</i></h3>
+    </div>  
+    <div class="storyLine">
+        <span [innerHTML]=movieDetail.summary ></span>
+    </div>
+</div>

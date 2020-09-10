@@ -103,7 +103,6 @@ export class HomeComponent implements OnInit {
             }
           }
         });
-        console.log(this.comedy,this.action,this.adult,this.drama,this.superNatural)
       }
     });
   }
