@@ -1,0 +1,20 @@
+<!-- <div class="divArea">
+    <h3>{{Header}}</h3>
+    <div style="padding-right: 6em;" *ngFor="let image of MoviesArray;let i=index">
+        <mat-card class="example-card list">
+            <div>
+                <img style="height:220px;" class="individualCard" [src]=image.image.original />
+            </div>
+        </mat-card>
+    </div>
+</div> -->
+<div class="divArea">
+    <h3>{{Header}}</h3>
+    <div style="padding-right: 6em;" *ngFor="let image of MoviesArray;let i=index">
+        <mat-card class="example-card list">
+            <div  class="back">
+                <img style="height:220px;" class="individualCard" [src]=image.image.original />
+            </div>
+        </mat-card>
+    </div>
+</div>

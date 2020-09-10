@@ -1,0 +1,21 @@
+.header{
+    background-color: #db0000;
+    height: 8vh;
+    color: white;
+    font-family: Graphique;
+    user-select: none;
+}
+h3{
+    margin: 0px 2px 0px 2px;
+    letter-spacing: .15rem;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+}
+.flexer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+

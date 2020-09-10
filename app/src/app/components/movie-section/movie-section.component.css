@@ -1,0 +1,48 @@
+.card {
+    margin: 2px;
+  }
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: start;
+  }
+  .example-card {
+    max-width: 20px;
+    max-height: 20px;
+    margin: 10px;
+    padding-right: 20px;
+    /* box-shadow:48px 20px 50px #090909,0px 0px 0px #0b0c0c */
+  }
+  
+  .individualCard {
+    width: calc(100% + 8em);
+    margin: 0px;
+  }
+  .individualCard :hover {
+    transform: translateX(25%);
+  }
+  .divArea {
+    display: -webkit-box;
+    width: 100%;
+    overflow: auto;
+    height: 15em;
+    overflow-y: hidden;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h3{
+      width: 100px;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .back{
+      /* height:220px; */
+  }
+  .back :hover{
+      transform: translateY(-8%);
+      z-index: 100;
+     box-shadow: 5px -2px 10px rgb(112, 111, 111),-6px -6px 10px rgb(128, 127, 127)
+  }
