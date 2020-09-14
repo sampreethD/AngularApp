@@ -1,7 +1,7 @@
 <div style="display: flex;flex-direction: row;justify-content: center;">
     <form class="example-form">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="search" (keyup)="onKeyup()" name="movieSearch" [(ngModel)]="movieSearch">
+            <input style="caret-color: transparent;" matInput placeholder="search" (keyup)="onKeyup()" name="movieSearch" [(ngModel)]="movieSearch">
             <button style="background: rgb(0 0 0 / 0%);border: 0;color: rgb(255 255 255);cursor: pointer;outline: none;"
                 mat-button *ngIf="movieSearch" matSuffix mat-icon-button aria-label="Clear" (click)="movieSearch=''">
                 <mat-icon>close</mat-icon>

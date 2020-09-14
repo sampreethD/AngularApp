@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   superNatural: any = [];
   adult: any = [];
   searchResults: any = [];
+  suspense:any=[]
   movieSearch = "";
   usertyping: any;
   searchOp = false;
@@ -48,8 +49,12 @@ export class HomeComponent implements OnInit {
     },
     {
       arr: this.adult,
-      header: "ADULT",
+      header: "THRILLER",
     },
+    {
+      arr: this.suspense,
+      header: "ADVENTURE",
+    }
   ];
 
   ngOnInit() {
@@ -66,6 +71,7 @@ export class HomeComponent implements OnInit {
         let action_films: any;
         let superNatural_films: any;
         let adult_films: any;
+        let suspense_films:any;
         this.arr = res;
         this.arr.filter((x) => {
           if (x["genres"].length) {
@@ -85,7 +91,10 @@ export class HomeComponent implements OnInit {
               genre.includes("Supernatural")
             );
             adult_films = x["genres"].filter((genre) =>
-              genre.includes("Adult")
+              genre.includes("Thriller")
+            );
+            suspense_films = x["genres"].filter((genre) =>
+              genre.includes("Adventure")
             );
 
             if (comedy_films.length) {
@@ -114,6 +123,15 @@ export class HomeComponent implements OnInit {
               adult_films = -1;
             }
           }
+          if (adult_films.length) {
+            this.adult.push(x);
+            adult_films = -1;
+          }
+          if (suspense_films.length) {
+            this.suspense.push(x);
+            suspense_films = -1;
+          }
+        
         });
       }
     });

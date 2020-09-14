@@ -18,7 +18,6 @@ export class MoviedescriptionComponent implements OnInit {
   getMovie() {
     this.common.movieObject.subscribe((res) => {
       this.movieDetail = res;
-      console.log(this.movieDetail);
       
     });
   }

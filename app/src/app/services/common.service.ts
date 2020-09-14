@@ -25,8 +25,6 @@ export class CommonService {
   }
 
   shareMovieData(movieDetails: any) {
-    console.log(movieDetails);
-    
     this.movieObservable.next(movieDetails);
   }
 }
