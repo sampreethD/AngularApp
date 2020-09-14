@@ -9,7 +9,7 @@ import {CommonService} from '../../services/common.service'
 export class MovieSectionComponent implements OnInit {
 
   @Input('moviesArray')MoviesArray:any; 
-  @Input('Header')Header:string; 
+  @Input('Header')Header:String; 
   @Input('show')show:boolean
   hide:boolean=true;
   constructor(public router:Router,public common:CommonService) { }
