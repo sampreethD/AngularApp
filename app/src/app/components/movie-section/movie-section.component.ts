@@ -10,16 +10,21 @@ export class MovieSectionComponent implements OnInit {
 
   @Input('moviesArray')MoviesArray:any; 
   @Input('Header')Header:string; 
-
+  @Input('show')show:boolean
+  hide:boolean=true;
   constructor(public router:Router,public common:CommonService) { }
 
   ngOnInit() {
   
   }
   _showInfo(info){
-    // console.log(info)
     this.common.shareMovieData(info);
     this.router.navigate(['/showInfo'])
+  }
+
+  _hide(){
+    this.hide=false;
+    this.show = false
   }
  
 
