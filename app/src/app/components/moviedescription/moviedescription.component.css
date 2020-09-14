@@ -1,0 +1,19 @@
+.back {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  place-content: center;
+  align-items: center;
+  margin:20px;
+}
+h3 {
+  margin: 2px;
+}
+
+.storyLine {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  width: 75%;
+  text-align: justify;
+}

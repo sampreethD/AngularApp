@@ -1,3 +1,20 @@
+<div style="display: flex;flex-direction: row;justify-content: center;">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input style="caret-color: transparent;" matInput placeholder="search" (keyup)="onKeyup()" name="movieSearch" [(ngModel)]="movieSearch">
+            <button style="background: rgb(0 0 0 / 0%);border: 0;color: rgb(255 255 255);cursor: pointer;outline: none;"
+                mat-button *ngIf="movieSearch" matSuffix mat-icon-button aria-label="Clear" (click)="movieSearch=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </form>
+</div>
+
+<div *ngIf="searchResults.length">
+    <app-movie-section [show]=true [(moviesArray)]="searchResults" [Header]="'Search Results'"></app-movie-section>
+</div>
+
+
 <div *ngFor="let i of categories">
-    <app-movie-section  [(moviesArray)] ="i.arr" [Header]="i.header"></app-movie-section>
+    <app-movie-section [(moviesArray)]="i.arr" [Header]="i.header"></app-movie-section>
 </div>

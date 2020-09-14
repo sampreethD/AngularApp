@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {MatInputModule} from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -14,6 +14,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MovieSectionComponent } from './components/movie-section/movie-section.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MoviedescriptionComponent } from './components/moviedescription/moviedescription.component';
+import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 
 @NgModule({
@@ -21,7 +27,8 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
     AppComponent,
     LayoutComponent,
     HomeComponent,
-    MovieSectionComponent
+    MovieSectionComponent,
+    MoviedescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,11 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [
     LoaderService,{provide:HTTP_INTERCEPTORS,useClass:HttpHandlerInterceptor,multi:true}

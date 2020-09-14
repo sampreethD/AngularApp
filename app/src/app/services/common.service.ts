@@ -1,10 +1,14 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class CommonService {
+  private movieObservable = new BehaviorSubject<any>({});
+  movieObject = this.movieObservable.asObservable();
+
   constructor(public http: HttpClient) {}
 
   async callApi() {
@@ -18,5 +22,9 @@ export class CommonService {
         }
       );
     });
+  }
+
+  shareMovieData(movieDetails: any) {
+    this.movieObservable.next(movieDetails);
   }
 }

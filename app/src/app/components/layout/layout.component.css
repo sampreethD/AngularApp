@@ -13,9 +13,9 @@ h3{
 }
 .flexer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 

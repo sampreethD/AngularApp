@@ -8,13 +8,30 @@
         </mat-card>
     </div>
 </div> -->
-<div class="divArea">
+<!-- <div class="divArea">
     <h3>{{Header}}</h3>
     <div style="padding-right: 6em;" *ngFor="let image of MoviesArray;let i=index">
-        <mat-card class="example-card list">
+        <div class="example-card list">
             <div  class="back">
-                <img style="height:220px;" class="individualCard" [src]=image.image.original />
+                <img (click)="_showInfo(image)" style="height:220px;" class="individualCard" [src]=image.image.original [alt]=image.name/>
             </div>
-        </mat-card>
+        </div>
+    </div>
+</div> -->
+
+<div *ngIf="show || hide" style="display: flex;flex-direction: row;justify-content: center;">
+    <h3>{{Header}}</h3>
+    <div style="display: flex;flex-direction: column;justify-content:center;">
+        <mat-icon style="cursor: pointer;" (click)="_hide()" *ngIf="show">delete</mat-icon>
+    </div>
+</div>
+
+<div  *ngIf="show || hide" class="scrollCss">
+    <div style="padding-right: 6em;" *ngFor="let image of MoviesArray;let i=index">
+        <div class="example-card list">
+            <div  class="back">
+                <img (click)="_showInfo(image)" style="height:220px;" class="individualCard" [src]=image.image.original [alt]=image.name/>
+            </div>
+        </div>
     </div>
 </div>
