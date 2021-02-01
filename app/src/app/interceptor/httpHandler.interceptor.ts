@@ -14,8 +14,8 @@ export class HttpHandlerInterceptor implements HttpInterceptor {
         return next.handle(req)
             .pipe(
                 finalize(() => {
+                    console.log('Please wait till it loads 😉');
                     this.responseInterceptor();
-                    console.log('loader interceptor working');
                 })
             );
     }

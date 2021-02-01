@@ -10,7 +10,6 @@ export class LoaderService {
   httpRequest$ = this.httpRequest.asObservable();
 
   httpRequestInProgress(bool) {
-    console.log('within loader',bool);
     this.httpRequest.next(bool);
   }
 
