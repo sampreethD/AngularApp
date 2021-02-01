@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-layout',
@@ -8,11 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
+  showLoader = false;
+  constructor(private router: Router,
+    private loader: LoaderService) {
 
-  constructor(private router:Router) { }
+  }
 
   ngOnInit() {
-    this.router.navigate([''])
+    // this.router.navigate(['']);
+  }
+
+  ngOnChanges(changes: SimpleChange): void {
+    this.loader.httpRequest$.subscribe(res => {
+      this.showLoader = res;
+    });
+
   }
 
 }

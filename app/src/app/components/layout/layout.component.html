@@ -1,4 +1,8 @@
-<div>
+
+<div *ngIf="showLoader">
+    <p>loading ....</p>
+</div>
+<div *ngIf="!showLoader">
     <div class="header flexer">
         <h3>SHOWFLIX</h3>
     </div>
@@ -13,3 +17,4 @@
        <p><i>powered by: TVMAZE</i></p>
     </div>
 </div>
+
