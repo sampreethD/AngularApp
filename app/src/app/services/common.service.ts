@@ -13,7 +13,7 @@ export class CommonService {
 
   async callApi() {
     return new Promise((resolve, reject) => {
-      this.http.get("http://api.tvmaze.com/shows?page=1").subscribe(
+      this.http.get("/* http://api.tvmaze.com/shows?page=1").subscribe(
         (res) => {
           return resolve(res);
         },
